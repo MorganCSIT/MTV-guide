@@ -1,121 +1,200 @@
-import * as React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import Header from '../components/header'
-import Footer from '../components/footer'
-import { useState, useEffect } from 'react'
+import * as React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import { useState, useEffect } from "react";
 
-import Banner from '../public/banner1.webp'
+import Banner from "../public/banner1.jpg";
 
 function HomePage({ videos }) {
-    const [activePanel, setActivePanel] = useState(null);
-    const [shuffledVideos, setShuffledVideos] = useState([]);
+  const [activePanel, setActivePanel] = useState(null);
+  const [shuffledVideos, setShuffledVideos] = useState([]);
 
-    useEffect(() => {
-        // Shuffle the videos array when the component mounts
-        const shuffled = [...videos].sort(() => Math.random() - 0.5);
-        setShuffledVideos(shuffled);
-    }, [videos]);
+  useEffect(() => {
+    // Shuffle the videos array when the component mounts
+    const shuffled = [...videos].sort(() => Math.random() - 0.5);
+    setShuffledVideos(shuffled);
+  }, [videos]);
 
-    function renderExpandCards() {
-        const videosPerRow = 4;
-        const rows = Math.ceil(shuffledVideos.length / videosPerRow);
+  function renderExpandCards() {
+    const videosPerRow = 4;
+    const rows = Math.ceil(shuffledVideos.length / videosPerRow);
 
-        const renderRow = (startIndex) => {
-            const rowVideos = shuffledVideos.slice(startIndex, startIndex + videosPerRow);
+    const renderRow = (startIndex) => {
+      const rowVideos = shuffledVideos.slice(
+        startIndex,
+        startIndex + videosPerRow
+      );
 
-            return (
-                <div key={startIndex} className="row mb-4">
-                    <div className="expand-container-card" style={{position:"relative", width: "100%", height: "auto", marginBottom: "10px", borderRadius: "20px" }}>
-                        {rowVideos.map((src, index) => (
-                            <div key={index} className={`panel ${activePanel === startIndex + index ? 'active' : ''}`} style={src.player === "vimeo" ? { backgroundImage: `url('https://vumbnail.com/${src.urlID}.jpg')` } : { backgroundImage: `url('http://i2.ytimg.com/vi/${src.urlID}/mqdefault.jpg')` }} onClick={() => handlePanelClick(startIndex + index, src._id)}>
-                                <h3 style={{ textShadow: "2px 2px 0px black", background: "rgba(0, 0, 0, 0.4)", padding:"0 10px", borderRadius:"10px" }}>{src.title}</h3>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            );
-        };
+      return (
+        <div key={startIndex} className="row mb-4">
+          <div
+            className="expand-container-card"
+            style={{
+              position: "relative",
+              width: "100%",
+              height: "auto",
+              marginBottom: "10px",
+              borderRadius: "20px",
+            }}
+          >
+            {rowVideos.map((src, index) => (
+              <div
+                key={index}
+                className={`panel ${
+                  activePanel === startIndex + index ? "active" : ""
+                }`}
+                style={
+                  src.player === "vimeo"
+                    ? {
+                        backgroundImage: `url('https://vumbnail.com/${src.urlID}.jpg')`,
+                      }
+                    : {
+                        backgroundImage: `url('http://i2.ytimg.com/vi/${src.urlID}/mqdefault.jpg')`,
+                      }
+                }
+                onClick={() => handlePanelClick(startIndex + index, src._id)}
+              >
+                <h3
+                  style={{
+                    textShadow: "2px 2px 0px black",
+                    background: "rgba(0, 0, 0, 0.4)",
+                    padding: "0 10px",
+                    borderRadius: "10px",
+                  }}
+                >
+                  {src.title}
+                </h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    };
 
-        const handlePanelClick = (panelIndex, id) => {
-            setActivePanel(panelIndex === activePanel ? window.location.href = `/browse/${id}` : panelIndex);
-        };
-
-        return (
-            <>
-                <div className='container'>
-                    {Array.from({ length: rows }, (_, index) => renderRow(index * videosPerRow))}
-                </div>
-            </>
-        )
-    }
-
-
-
-
+    const handlePanelClick = (panelIndex, id) => {
+      setActivePanel(
+        panelIndex === activePanel
+          ? (window.location.href = `/browse/${id}`)
+          : panelIndex
+      );
+    };
 
     return (
-        <main role="main" className='main'>
+      <>
+        <div className="container">
+          {Array.from({ length: rows }, (_, index) =>
+            renderRow(index * videosPerRow)
+          )}
+        </div>
+      </>
+    );
+  }
 
-            <Head>
-                <title>VR Tours - Home</title>
-                <meta name="description" content="A VR Video Hosting platform" />
-            </Head>
+  return (
+    <main role="main" className="main">
+      <Head>
+        <title>VR Tours - Home</title>
+        <meta name="description" content="A VR Video Hosting platform" />
+      </Head>
 
-            <Header></Header>
+      <Header></Header>
 
-            <div style={{
-                position: 'fixed',
-                height: "100vh",
-                width: "100vw",
-                marginTop: "10vh",
-                backgroundImage: `url(${Banner.src})`,
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat"
-            }}>
+      <div
+        style={{
+          position: "fixed",
+          height: "100vh",
+          width: "100vw",
 
-                <div className="content p-0 text-center bg-image" style={{ height: "100vh", top: "0", position: "relative", background: "rgba(0, 0, 0, 0.4)", width: "100%" }}>
-                </div>
-            </div>
+          backgroundImage: `url(${Banner.src})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div
+          className="content p-0 text-center bg-image"
+          style={{
+            height: "100vh",
+            top: "0",
+            position: "relative",
+            background: "rgba(0, 0, 0, 0.4)",
+            width: "100%",
+          }}
+        ></div>
+      </div>
 
-            <div className="content p-0 text-center bg-image" style={{ height: "100vh", top: "0", position: "relative", width: "100%" }}>
-                <div className="d-flex justify-content-center align-items-center h-100">
-                    <div >
-                        <h1 className="mb-3" style={{ color: "white", textShadow: "2px 2px 0px black" }}>Welcome to AUVR</h1>
-                        <h4 className="mb-3" style={{ color: "white", textShadow: "2px 2px 0px black" }}>Start searching through our collection of VR Videos in Assumption University</h4>
-                        <br></br>
-                        <Link className="btn btn-outline-light btn-lg" href="/browse" role="button">Search</Link>
-                    </div>
-                </div>
-            </div>
+      <div
+        className="content p-0 text-center bg-image"
+        style={{
+          height: "100vh",
+          top: "0",
+          position: "relative",
+          width: "100%",
+        }}
+      >
+        <div className="d-flex justify-content-center align-items-center h-100">
+          <div>
+            <h1
+              className="mb-3"
+              style={{ color: "white", textShadow: "2px 2px 0px black" }}
+            >
+              Activities & Reccomendations!
+            </h1>
+            <h4
+              className="mb-3"
+              style={{ color: "white", textShadow: "2px 2px 0px black" }}
+            >
+              Start searching through our collection of VR Videos in Assumption
+              University
+            </h4>
+            <br></br>
+            <Link
+              className="btn btn-outline-light btn-lg"
+              href="/browse"
+              role="button"
+            >
+              Search
+            </Link>
+          </div>
+        </div>
+      </div>
 
-            <div className="content p-0 text-center bg-image" style={{ height: "auto", top: "0", position: "relative", width: "100%" }}>
-                <div className="d-flex justify-content-center align-items-center h-100">
-                    <div >
-                        <h4 className="mb-3" style={{ color: "white", textShadow: "2px 2px 0px black" }}>Or watch them now...</h4>
-                        <br></br>
-                    </div>
-                </div>
-                {renderExpandCards()}
+      <div
+        className="content p-0 text-center bg-image"
+        style={{
+          height: "auto",
+          top: "0",
+          position: "relative",
+          width: "100%",
+        }}
+      >
+        <div className="d-flex justify-content-center align-items-center h-100">
+          <div>
+            <h4
+              className="mb-3"
+              style={{ color: "white", textShadow: "2px 2px 0px black" }}
+            >
+              Or watch them now...
+            </h4>
+            <br></br>
+          </div>
+        </div>
+        {renderExpandCards()}
+      </div>
 
-            </div>
-
-
-            <Footer />
-
-        </main>
-    )
+      <Footer />
+    </main>
+  );
 }
 
-export default HomePage
+export default HomePage;
 
 export async function getServerSideProps() {
-    const vid = await fetch(`https://auvr.vercel.app/api/browse/videos`)
-    const videos = await vid.json()
-    return { props: { videos } }
+  const vid = await fetch(`https://auvr.vercel.app/api/browse/videos`);
+  const videos = await vid.json();
+  return { props: { videos } };
 }
-
-
 
 // import * as React from 'react'
 // import Head from 'next/head'
@@ -193,11 +272,8 @@ export async function getServerSideProps() {
 
 // export default HomePage
 
-
-
-
-
-{/* <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel" >
+{
+  /* <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel" >
 
                     <div className="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -272,4 +348,5 @@ export async function getServerSideProps() {
                         <span className="carousel-control-next-icon" aria-hidden="true"></span>
                         <span className="visually-hidden">Next</span>
                     </button>
-                </div>*/}
+                </div>*/
+}
