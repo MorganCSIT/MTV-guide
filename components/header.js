@@ -23,11 +23,11 @@ const Header = () => {
       >
         <div className="container-fluid">
           <img
-            src="/pngwing.png"
-            width="70"
-            height="70"
+            src="/mangologo.png"
+            width="68"
+            height="68"
             style={{
-              background: "#047a83",
+              background: "",
               borderRadius: "15px",
               paddingRight: "1.5px",
             }}
@@ -66,6 +66,11 @@ const Header = () => {
               <li className="nav-item">
                 <Link className="nav-link" href="/browse">
                   Search
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" href="/maps" role="button">
+                  Maps
                 </Link>
               </li>
 

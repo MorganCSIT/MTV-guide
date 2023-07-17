@@ -7,96 +7,12 @@ import { useState, useEffect } from "react";
 
 import Banner from "../public/banner1.jpg";
 
-function HomePage({ videos }) {
-  const [activePanel, setActivePanel] = useState(null);
-  const [shuffledVideos, setShuffledVideos] = useState([]);
-
-  useEffect(() => {
-    // Shuffle the videos array when the component mounts
-    const shuffled = [...videos].sort(() => Math.random() - 0.5);
-    setShuffledVideos(shuffled);
-  }, [videos]);
-
-  function renderExpandCards() {
-    const videosPerRow = 4;
-    const rows = Math.ceil(shuffledVideos.length / videosPerRow);
-
-    const renderRow = (startIndex) => {
-      const rowVideos = shuffledVideos.slice(
-        startIndex,
-        startIndex + videosPerRow
-      );
-
-      return (
-        <div key={startIndex} className="row mb-4">
-          <div
-            className="expand-container-card"
-            style={{
-              position: "relative",
-              width: "100%",
-              height: "auto",
-              marginBottom: "10px",
-              borderRadius: "20px",
-            }}
-          >
-            {rowVideos.map((src, index) => (
-              <div
-                key={index}
-                className={`panel ${
-                  activePanel === startIndex + index ? "active" : ""
-                }`}
-                style={
-                  src.player === "vimeo"
-                    ? {
-                        backgroundImage: `url('https://vumbnail.com/${src.urlID}.jpg')`,
-                      }
-                    : {
-                        backgroundImage: `url('http://i2.ytimg.com/vi/${src.urlID}/mqdefault.jpg')`,
-                      }
-                }
-                onClick={() => handlePanelClick(startIndex + index, src._id)}
-              >
-                <h3
-                  style={{
-                    textShadow: "2px 2px 0px black",
-                    background: "rgba(0, 0, 0, 0.4)",
-                    padding: "0 10px",
-                    borderRadius: "10px",
-                  }}
-                >
-                  {src.title}
-                </h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      );
-    };
-
-    const handlePanelClick = (panelIndex, id) => {
-      setActivePanel(
-        panelIndex === activePanel
-          ? (window.location.href = `/browse/${id}`)
-          : panelIndex
-      );
-    };
-
-    return (
-      <>
-        <div className="container">
-          {Array.from({ length: rows }, (_, index) =>
-            renderRow(index * videosPerRow)
-          )}
-        </div>
-      </>
-    );
-  }
-
+function HomePage() {
   return (
     <main role="main" className="main">
       <Head>
-        <title>VR Tours - Home</title>
-        <meta name="description" content="A VR Video Hosting platform" />
+        <title>MangoTreeVilla</title>
+        <meta name="description" content="MangoTreeVilla" />
       </Head>
 
       <Header></Header>
@@ -175,14 +91,79 @@ function HomePage({ videos }) {
               className="mb-3"
               style={{ color: "white", textShadow: "2px 2px 0px black" }}
             >
-              Or watch them now...
+              ...Or use these maps
             </h4>
             <br></br>
           </div>
         </div>
-        {renderExpandCards()}
+        <div>
+          <div>
+            <iframe
+              src="https://www.google.com/maps/d/embed?mid=1wt7eF-aHh_sNDVHY-TurnLr1-TQ&ehbc=2E312F"
+              width="640"
+              height="480"
+            ></iframe>
+          </div>
+          <br></br>
+          <div>
+            <iframe
+              src="https://www.google.com/maps/d/embed?mid=19UESSqs4lEfrjIGcs1ICBqI6nPA&ehbc=2E312F"
+              width="640"
+              height="480"
+              allowFullScreen={true}
+            ></iframe>
+          </div>
+          <div>
+            <br></br>
+            <iframe
+              src="https://www.google.com/maps/d/embed?mid=17RvgDoEko82EMe1i1_0uiXqiBHM-EHj9&ehbc=2E312F"
+              width="640"
+              height="480"
+            ></iframe>
+          </div>
+          <br></br>
+          <div>
+            <iframe
+              src="https://www.google.com/maps/d/embed?mid=1-jKDtwmT0-OA6UcR6RgclN9uP5Q&ehbc=2E312F"
+              width="640"
+              height="480"
+            ></iframe>
+          </div>
+          <br></br>
+          <div>
+            <br></br>
+            <iframe
+              src="https://www.google.com/maps/d/embed?mid=1xKUsu5P0pO5EoVFMSCdM1olt7qHATTUa&ehbc=2E312F"
+              width="640"
+              height="480"
+            ></iframe>
+          </div>
+          <br></br>
+          <div>
+            <iframe
+              src="https://www.google.com/maps/d/embed?mid=1bYH46qtHCG1kwWEePy68WXfi2FY&ehbc=2E312F"
+              width="640"
+              height="480"
+            ></iframe>
+          </div>
+          <br></br>
+          <div>
+            <iframe
+              src="https://www.google.com/maps/d/embed?mid=1daWFocUnSFs8VUye3Kvd9r714_bV--kP&ehbc=2E312F"
+              width="640"
+              height="480"
+            ></iframe>
+          </div>
+          <br></br>
+          <div>
+            <iframe
+              src="https://www.google.com/maps/d/embed?mid=1EpT1999Heig7bEY3-WD6iO0Fb310sXMS&ehbc=2E312F"
+              width="640"
+              height="480"
+            ></iframe>
+          </div>
+        </div>
       </div>
-
       <Footer />
     </main>
   );
