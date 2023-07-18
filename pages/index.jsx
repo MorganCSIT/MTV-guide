@@ -152,6 +152,7 @@ function HomePage() {
               src="https://www.google.com/maps/d/embed?mid=1daWFocUnSFs8VUye3Kvd9r714_bV--kP&ehbc=2E312F"
               width="640"
               height="480"
+              allowFullScreen={true}
             ></iframe>
           </div>
           <br></br>
