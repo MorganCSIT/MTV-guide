@@ -99,67 +99,34 @@ function HomePage() {
         <div>
           <div>
             <iframe
+              src="https://www.google.com/maps/d/embed?mid=1yEadiJSV3W_90XMluZyERkIEXRE&ehbc=2E312F"
+              width="450"
+              height="480"
+            ></iframe>
+          </div>
+        </div>
+        <div>
+          <div>
+            <iframe
               src="https://www.google.com/maps/d/embed?mid=1wt7eF-aHh_sNDVHY-TurnLr1-TQ&ehbc=2E312F"
-              width="640"
+              width="450"
               height="480"
             ></iframe>
           </div>
           <br></br>
+
           <div>
-            <iframe
-              src="https://www.google.com/maps/d/embed?mid=19UESSqs4lEfrjIGcs1ICBqI6nPA&ehbc=2E312F"
-              width="640"
-              height="480"
-              allowFullScreen={true}
-            ></iframe>
-          </div>
-          <div>
-            <br></br>
             <iframe
               src="https://www.google.com/maps/d/embed?mid=17RvgDoEko82EMe1i1_0uiXqiBHM-EHj9&ehbc=2E312F"
-              width="640"
+              width="450"
               height="480"
-            ></iframe>
-          </div>
-          <br></br>
-          <div>
-            <iframe
-              src="https://www.google.com/maps/d/embed?mid=1-jKDtwmT0-OA6UcR6RgclN9uP5Q&ehbc=2E312F"
-              width="640"
-              height="480"
-            ></iframe>
-          </div>
-          <br></br>
-          <div>
-            <br></br>
-            <iframe
-              src="https://www.google.com/maps/d/embed?mid=1xKUsu5P0pO5EoVFMSCdM1olt7qHATTUa&ehbc=2E312F"
-              width="640"
-              height="480"
-            ></iframe>
-          </div>
-          <br></br>
-          <div>
-            <iframe
-              src="https://www.google.com/maps/d/embed?mid=1bYH46qtHCG1kwWEePy68WXfi2FY&ehbc=2E312F"
-              width="640"
-              height="480"
-            ></iframe>
-          </div>
-          <br></br>
-          <div>
-            <iframe
-              src="https://www.google.com/maps/d/embed?mid=1daWFocUnSFs8VUye3Kvd9r714_bV--kP&ehbc=2E312F"
-              width="640"
-              height="480"
-              allowFullScreen={true}
             ></iframe>
           </div>
           <br></br>
           <div>
             <iframe
               src="https://www.google.com/maps/d/embed?mid=1EpT1999Heig7bEY3-WD6iO0Fb310sXMS&ehbc=2E312F"
-              width="640"
+              width="450"
               height="480"
             ></iframe>
           </div>
