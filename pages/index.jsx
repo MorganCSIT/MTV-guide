@@ -55,14 +55,13 @@ function HomePage() {
               className="mb-3"
               style={{ color: "white", textShadow: "2px 2px 0px black" }}
             >
-              Activities & Reccomendations!
+              AoYon Discovery Phuket
             </h1>
             <h4
               className="mb-3"
               style={{ color: "white", textShadow: "2px 2px 0px black" }}
             >
-              Start searching through our collection of VR Videos in Assumption
-              University
+              Explore by searching through a collection of videos
             </h4>
             <br></br>
             <Link
@@ -91,43 +90,54 @@ function HomePage() {
               className="mb-3"
               style={{ color: "white", textShadow: "2px 2px 0px black" }}
             >
-              ...Or use these maps
+              or browse through Phuket using interactive maps
             </h4>
             <br></br>
           </div>
         </div>
-        <div>
-          <div>
+        <div style={{ padding: "10%", boxSizing: "border-box" }}>
+          <div
+            style={{
+              position: "relative",
+              paddingBottom: "100%", // for a 4:3 aspect ratio
+              height: "0",
+              overflow: "hidden",
+            }}
+          >
             <iframe
-              src="https://www.google.com/maps/d/embed?mid=1yEadiJSV3W_90XMluZyERkIEXRE&ehbc=2E312F"
-              width="450"
-              height="480"
+              src="https://www.google.com/maps/d/embed?mid=1Ncfb1O2xy0AE9V1vIxm0zhu_Z8PPMPQ&ehbc=2E312F"
+              style={{
+                position: "absolute",
+                top: "0",
+                left: "0",
+                width: "100%",
+                height: "100%",
+                border: "0",
+              }}
+              allowFullScreen
             ></iframe>
           </div>
         </div>
-        <div>
-          <div>
+        <div style={{ padding: "10%", boxSizing: "border-box" }}>
+          <div
+            style={{
+              position: "relative",
+              paddingBottom: "100%", // for a 4:3 aspect ratio
+              height: "0",
+              overflow: "hidden",
+            }}
+          >
             <iframe
-              src="https://www.google.com/maps/d/embed?mid=1wt7eF-aHh_sNDVHY-TurnLr1-TQ&ehbc=2E312F"
-              width="450"
-              height="480"
-            ></iframe>
-          </div>
-          <br></br>
-
-          <div>
-            <iframe
-              src="https://www.google.com/maps/d/embed?mid=17RvgDoEko82EMe1i1_0uiXqiBHM-EHj9&ehbc=2E312F"
-              width="450"
-              height="480"
-            ></iframe>
-          </div>
-          <br></br>
-          <div>
-            <iframe
-              src="https://www.google.com/maps/d/embed?mid=1EpT1999Heig7bEY3-WD6iO0Fb310sXMS&ehbc=2E312F"
-              width="450"
-              height="480"
+              src="https://www.google.com/maps/d/embed?mid=1yEadiJSV3W_90XMluZyERkIEXRE&ehbc=2E312F"
+              style={{
+                position: "absolute",
+                top: "0",
+                left: "0",
+                width: "100%",
+                height: "100%",
+                border: "0",
+              }}
+              allowFullScreen
             ></iframe>
           </div>
         </div>

@@ -68,11 +68,6 @@ const Header = () => {
                   Search
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" href="/maps" role="button">
-                  Maps
-                </Link>
-              </li>
 
               {/* <li className="nav-item">
                                 <Link className="nav-link" href="/gettingStarted">Getting Started</Link>
