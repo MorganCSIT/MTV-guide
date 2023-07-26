@@ -5,7 +5,7 @@ const WhatsAppContact = () => {
     // The pre-filled message in the WhatsApp chat.
     const message = "Hi, this is Morgan from MTV.";
     // This is a phone number in the international format.
-    const phone = "1234567890"; // Replace this with your phone number.
+    const phone = "+66810851211"; // Replace this with your phone number.
 
     // The WhatsApp API URL.
     const apiURL = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
