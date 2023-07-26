@@ -7,6 +7,7 @@ import { useState } from "react";
 import Link from "next/link";
 import BackspaceIcon from "@mui/icons-material/Backspace";
 import { TextField, Button } from "@mui/material";
+import WhatsAppContact from "./whatsapp";
 
 import Banner from "../../public/banner2.jpg";
 
@@ -202,6 +203,11 @@ export default function BrowsePage({ videos, categories }) {
               entertainment
             </p>
           </div>
+
+          <br />
+          <br />
+
+          <WhatsAppContact />
 
           <br />
           <br />
