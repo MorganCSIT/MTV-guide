@@ -10,7 +10,7 @@ import Banner from "../public/banner1.jpg";
 function HomePage() {
   const scrollToBottom = () => {
     const windowHeight = window.innerHeight;
-    window.scrollTo(0, windowHeight);
+    window.scrollTo(0.5, windowHeight);
   };
 
   <button onClick={scrollToBottom}>Scroll</button>;
@@ -91,18 +91,14 @@ function HomePage() {
           width: "100%",
         }}
       >
-        <div className="d-flex justify-content-center align-items-center h-100">
-          <div>
-            <h4
-              className="mb-3"
-              style={{ color: "white", textShadow: "2px 2px 0px black" }}
-            >
-              or browse through Phuket using interactive maps
-            </h4>
-            <br></br>
-          </div>
-        </div>
         <div id="firstMap" style={{ padding: "10%", boxSizing: "border-box" }}>
+          <h3
+            className="mb-3"
+            style={{ color: "white", textShadow: "2px 2px 0px black" }}
+          >
+            Interactive maps of AoYon & Phuket.
+            <br />
+          </h3>
           <div
             style={{
               position: "relative",
@@ -113,6 +109,7 @@ function HomePage() {
           >
             <iframe
               src="https://www.google.com/maps/d/embed?mid=1Ncfb1O2xy0AE9V1vIxm0zhu_Z8PPMPQ&ehbc=2E312F"
+              loading="lazy"
               style={{
                 position: "absolute",
                 top: "0",
@@ -136,6 +133,7 @@ function HomePage() {
           >
             <iframe
               src="https://www.google.com/maps/d/embed?mid=1yEadiJSV3W_90XMluZyERkIEXRE&ehbc=2E312F"
+              loading="lazy"
               style={{
                 position: "absolute",
                 top: "0",

@@ -69,10 +69,13 @@ const Header = () => {
           </button>
 
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul className="navbar-nav">
-              {/* <li className="nav-item">
+            <ul
+              className="navbar-nav"
+              style={{ paddingLeft: "13px", paddingTop: "5px" }}
+            >
+              <li className="nav-item">
                 <Link className="nav-link" aria-current="page" href="/">
-                  Home
+                  Maps
                 </Link>
               </li>
 
@@ -80,7 +83,7 @@ const Header = () => {
                 <Link className="nav-link" href="/browse">
                   Search
                 </Link>
-              </li> */}
+              </li>
 
               {/* <li className="nav-item">
                                 <Link className="nav-link" href="/gettingStarted">Getting Started</Link>
