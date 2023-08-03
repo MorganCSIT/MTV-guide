@@ -22,18 +22,21 @@ const Header = () => {
         style={{ background: "#047a83" }}
       >
         <div className="container-fluid">
-          <img
-            src="/mangologo.png"
-            width="68"
-            height="68"
-            style={{
-              background: "",
-              borderRadius: "15px",
-              paddingRight: "1.5px",
-            }}
-          />
-
-          <a
+          <Link href="/">
+            <img
+              src="/angel.png"
+              width="68"
+              height="68"
+              style={{
+                background: "",
+                borderRadius: "100px",
+                border: "3px solid black",
+                paddingRight: "1.5px",
+              }}
+            />
+          </Link>
+          <Link
+            href="/"
             className="navbar-brand"
             style={{
               paddingLeft: "15px",
@@ -41,8 +44,18 @@ const Header = () => {
               textShadow: "2px 2px 2px #000000",
             }}
           >
-            MangoTreeVilla
-          </a>
+            AoYon Discovery
+          </Link>
+          {/* <a
+            className="navbar-brand"
+            style={{
+              paddingLeft: "15px",
+              fontFamily: "sans-serif",
+              textShadow: "2px 2px 2px #000000",
+            }}
+          >
+            AoYon Discovery
+          </a> */}
           <button
             className="navbar-toggler"
             type="button"
@@ -57,7 +70,7 @@ const Header = () => {
 
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link" aria-current="page" href="/">
                   Home
                 </Link>
@@ -67,7 +80,7 @@ const Header = () => {
                 <Link className="nav-link" href="/browse">
                   Search
                 </Link>
-              </li>
+              </li> */}
 
               {/* <li className="nav-item">
                                 <Link className="nav-link" href="/gettingStarted">Getting Started</Link>

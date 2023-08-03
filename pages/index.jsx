@@ -8,6 +8,12 @@ import { useState, useEffect } from "react";
 import Banner from "../public/banner1.jpg";
 
 function HomePage() {
+  const scrollToBottom = () => {
+    const windowHeight = window.innerHeight;
+    window.scrollTo(0, windowHeight);
+  };
+
+  <button onClick={scrollToBottom}>Scroll</button>;
   return (
     <main role="main" className="main">
       <Head>
@@ -22,7 +28,6 @@ function HomePage() {
           position: "fixed",
           height: "100vh",
           width: "100vw",
-
           backgroundImage: `url(${Banner.src})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
@@ -34,7 +39,7 @@ function HomePage() {
             height: "100vh",
             top: "0",
             position: "relative",
-            background: "rgba(0, 0, 0, 0.4)",
+            background: "rgba(0, 0, 0, 0.6)",
             width: "100%",
           }}
         ></div>
@@ -61,16 +66,18 @@ function HomePage() {
               className="mb-3"
               style={{ color: "white", textShadow: "2px 2px 0px black" }}
             >
-              Explore by searching through a collection of videos
+              Make the most out of your stay in AoYon
             </h4>
             <br></br>
-            <Link
+
+            <button
+              onClick={scrollToBottom}
               className="btn btn-outline-light btn-lg"
-              href="/browse"
+              // href="/browse"
               role="button"
             >
-              Search
-            </Link>
+              Explore
+            </button>
           </div>
         </div>
       </div>
@@ -95,7 +102,7 @@ function HomePage() {
             <br></br>
           </div>
         </div>
-        <div style={{ padding: "10%", boxSizing: "border-box" }}>
+        <div id="firstMap" style={{ padding: "10%", boxSizing: "border-box" }}>
           <div
             style={{
               position: "relative",

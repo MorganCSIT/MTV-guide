@@ -43,12 +43,16 @@ export default function Video({ video }) {
                 </div>
             </section> */}
 
-      <div className="album py-5 bg-light" style={{ marginTop: "10vh" }}>
+      <div className="album py-5 bg-light" style={{ marginTop: "5vh" }}>
         <div>
           <div className="row g-0">
             <div
               className="card mb-3 player-container"
-              style={{ padding: "1%" }}
+              style={{
+                padding: "1%",
+                backgroundColor: "#EDEDED",
+                border: "10px solid #68AFB4",
+              }}
             >
               <h2
                 className="jumbotron-heading"
@@ -79,7 +83,7 @@ export default function Video({ video }) {
 
               <h1
                 className="jumbotron-heading"
-                style={{ borderTop: "solid 0.5pt", paddingBottom: "10px" }}
+                style={{ paddingBottom: "10px" }}
               ></h1>
 
               <div>

@@ -9,7 +9,7 @@ import BackspaceIcon from "@mui/icons-material/Backspace";
 import { TextField, Button } from "@mui/material";
 import WhatsAppContact from "./whatsapp";
 
-import Banner from "../../public/banner2.jpg";
+import Banner from "../../public/banner1.jpg";
 
 export default function BrowsePage({ videos, categories }) {
   const [videosToShow, setVideosToShow] = useState(6);
@@ -161,7 +161,7 @@ export default function BrowsePage({ videos, categories }) {
       <section
         className="jumbotron text-center"
         style={{
-          marginTop: "5vh",
+          borderTop: "7vh solid #047a83",
           position: "relative",
           height: "55vh",
           // backgroundImage: "url('https://media.istockphoto.com/id/1379108916/vector/metaverse-technology-background.jpg?s=612x612&w=0&k=20&c=BhoTlueNSWAXnanIpiZ6PlXO5ZXOD_eOquQ_NIEuZQk=')",
@@ -175,15 +175,14 @@ export default function BrowsePage({ videos, categories }) {
         <div
           className="content p-0 text-center bg-image"
           style={{
-            height: "55vh",
+            height: "48vh",
             top: "0",
             position: "absolute",
-            background: "rgba(0, 0, 0, 0.4)",
+            background: "rgba(0, 0, 0, 0.6)",
             width: "100%",
           }}
         >
           <div className="container">
-            <br />
             <br />
             <br />
             <br />
@@ -203,14 +202,6 @@ export default function BrowsePage({ videos, categories }) {
               entertainment
             </p>
           </div>
-
-          <br />
-          <br />
-
-          <WhatsAppContact />
-
-          <br />
-          <br />
 
           <div className="input-group" style={{ padding: "0 15% 0 15%" }}>
             <input
