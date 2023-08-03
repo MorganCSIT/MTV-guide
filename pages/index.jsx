@@ -60,7 +60,8 @@ function HomePage() {
               className="mb-3"
               style={{ color: "white", textShadow: "2px 2px 0px black" }}
             >
-              AoYon Discovery Phuket
+              AoYon Discovery <br />
+              Phuket
             </h1>
             <h4
               className="mb-3"
