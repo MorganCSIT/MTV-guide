@@ -4,7 +4,11 @@ const Footer = () => {
   return (
     <footer
       className="text-center text-lg-start  pt-4"
-      style={{ background: "#047a83", position: "relative" }}
+      style={{
+        background: "#047a83",
+        position: "relative",
+        width: "100%",
+      }}
     >
       <div className="container-fluid p-4 foot">
         <div className="row">
@@ -17,8 +21,8 @@ const Footer = () => {
       </div>
 
       <div className="text-center p-3 border-top border-white text-white">
-        Link to our website:
-        {/* <a className="text-white" href="https://auvr.vercel.app/">
+        {/* Link to our website:
+        <a className="text-white" href="https://auvr.vercel.app/">
           {" "}
           auvr.vercel.app
         </a> */}

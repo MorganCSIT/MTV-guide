@@ -9,7 +9,7 @@ import BackspaceIcon from "@mui/icons-material/Backspace";
 import { TextField, Button } from "@mui/material";
 import WhatsAppContact from "./whatsapp";
 
-import Banner from "../../public/banner1.jpg";
+import Banner from "../../public/banner1.webp";
 
 export default function BrowsePage({ videos, categories }) {
   const [videosToShow, setVideosToShow] = useState(6);
@@ -151,8 +151,8 @@ export default function BrowsePage({ videos, categories }) {
     <main role="main" className="main">
       <div>
         <Head>
-          <title>VR Tours</title>
-          <meta name="description" content="A VR Video Hosting platform" />
+          <title>Phuket Island Lens</title>
+          <meta name="description" content="Your Visual Compass to Paradise!" />
         </Head>
       </div>
 
@@ -187,21 +187,23 @@ export default function BrowsePage({ videos, categories }) {
             <br />
             <br />
             <br />
+            <br />
 
             <h1
               className="jumbotron-heading"
               style={{ color: "white", textShadow: "2px 2px 0px black" }}
             >
-              VR Videos just for you
+              Phuket Island Lens
             </h1>
             <p
               className="lead"
               style={{ color: "white", textShadow: "2px 2px 0px black" }}
             >
-              Browse our collection of VR videos and view them with your full
-              entertainment
+              Discover Phuket Like Never Before: Your Visual Guide to Paradise!
             </p>
           </div>
+          <br />
+          <br />
 
           <div className="input-group" style={{ padding: "0 15% 0 15%" }}>
             <input

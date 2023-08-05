@@ -44,7 +44,7 @@ const Header = () => {
               textShadow: "2px 2px 2px #000000",
             }}
           >
-            AoYon Discovery
+            Aoyon Discovery
           </Link>
           {/* <a
             className="navbar-brand"

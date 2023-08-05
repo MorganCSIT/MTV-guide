@@ -4,8 +4,9 @@ import Link from "next/link";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { useState, useEffect } from "react";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 
-import Banner from "../public/banner1.jpg";
+import Banner from "../public/banner1.webp";
 
 function HomePage() {
   const scrollToBottom = () => {
@@ -17,7 +18,7 @@ function HomePage() {
   return (
     <main role="main" className="main">
       <Head>
-        <title>MangoTreeVilla</title>
+        <title>Phuket Interactive Maps</title>
         <meta name="description" content="MangoTreeVilla" />
       </Head>
 
@@ -60,14 +61,14 @@ function HomePage() {
               className="mb-3"
               style={{ color: "white", textShadow: "2px 2px 0px black" }}
             >
-              AoYon Discovery <br />
+              Aoyon Discovery <br />
               Phuket
             </h1>
             <h4
               className="mb-3"
               style={{ color: "white", textShadow: "2px 2px 0px black" }}
             >
-              Make the most out of your stay in AoYon
+              Make the most of your stay in Aoyon
             </h4>
             <br></br>
 
@@ -96,10 +97,22 @@ function HomePage() {
           <h3
             className="mb-3"
             style={{ color: "white", textShadow: "2px 2px 0px black" }}
+          ></h3>
+          <h5
+            className="mb-3"
+            style={{
+              color: "white",
+              textShadow: "2px 2px 0px black",
+              display: "flex",
+              justifyContent: "flexstart",
+              paddingLeft: "23px",
+            }}
           >
-            Interactive maps of AoYon & Phuket.
+            <ArrowDownwardIcon color="white" />
+            Press to see list
             <br />
-          </h3>
+          </h5>
+
           <div
             style={{
               position: "relative",
