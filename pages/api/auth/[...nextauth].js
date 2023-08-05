@@ -20,8 +20,8 @@ export const authOptions = {
       async authorize(credentials, req) {
         // Add logic here to look up the user from the credentials supplied
         console.log("credentials", credentials);
-        if (credentials.username === "a" && credentials.password === "b") {
-          var user = { id: "2", name: "K Smith", email: "ksmith@example.com" };
+        if (credentials.username === "a" && credentials.password === "c") {
+          var user = { id: "3", name: "M Smith", email: "msmith@example.com" };
         }
 
         if (user) {
