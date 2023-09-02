@@ -21,11 +21,11 @@ const Footer = () => {
       </div>
 
       <div className="text-center p-3 border-top border-white text-white">
-        {/* Link to our website:
+        Link to our website:
         <a className="text-white" href="https://auvr.vercel.app/">
           {" "}
           auvr.vercel.app
-        </a> */}
+        </a>
       </div>
     </footer>
   );
